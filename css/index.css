@@ -219,16 +219,17 @@ header.home-header {
 }
 
 header.home-header div {
-	width: 100%;
-	text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 header.home-header div:last-of-type {
-	display: none;
+    display: block;
 }
 
 header.home-header h1 {
-	font-size: 3rem;
+    font-size: 6rem;
+    max-width: 380px;
 	width: 100%;
 	margin: 0 auto;
 	line-height: 1.1;
@@ -239,20 +240,21 @@ header.services-header h1 {
 	font-size: 1.7rem;
 }
 
-@media screen and (min-width: 992px) {
-	header.home-header div {
-		width: 50%;
-		text-align: center;
-	}
-
+@media screen and (max-width: 992px) {
 	header.home-header div:last-of-type {
-		display: block;
-	}
+        display: none;
+    }
 
-	header.home-header h1 {
-		font-size: 6rem;
-		max-width: 380px;
-	}
+    header.home-header div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header.home-header h1 {
+        font-size: 4rem;
+        max-width: 300px;
+    }
 }
 
 /* ===Main Content=== */
