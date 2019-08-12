@@ -193,7 +193,6 @@ nav li a:hover {
 @media screen and (max-width: 500px) {
     nav ul {
         flex-direction: column;
-        max-width: 350px;
     }
 
     nav li {
@@ -279,15 +278,24 @@ main {
 	}
 }
 
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .service-card {
 	border: 1px solid black;
 	background: #f6f7f7;
 	padding: 1.5rem;
-	margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: calc(50% - 1.25rem);
 }
-.service-card:last-child {
-	margin-bottom: 0;
+
+.service-card:nth-child(n + 5) {
+    margin-bottom: 0;
 }
+
 .service-card button {
 	font-size: .85rem;
 	padding: .65rem 1.5rem;
@@ -295,13 +303,23 @@ main {
 	border-radius: 7px;
 }
 
-@media screen and (min-width: 768px) {
-	.service-card {
-		width: calc(50% - 1.25rem);
-	}
+@media screen and (max-width: 800px) {
+    .services-header {
+        margin-top: 2.5rem;
+    }
 
-	.service-card:nth-child(n + 5) {
-		margin-bottom: 0;
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 500px;
+    }
+
+	.service-card:nth-child(5) {
+		margin-bottom: 2.5rem;
 	}
 }
 
