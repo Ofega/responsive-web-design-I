@@ -1,3 +1,321 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+	margin-bottom: 0;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+p {
+	line-height: 1.3;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+/* ===Utils=== */
+.wrapper-y {
+	padding: 2.5rem 0
+}
+.wrapper-y.only-bottom {
+	padding-top: 0 
+}
+
+.mt-1 {
+	margin-top: 1rem
+}
+.mt-1h {
+	margin-top: 1.5rem
+}
+.mt-2 {
+	margin-top: 2rem
+}
+
+.btn {
+	background: #fff;
+	border: 1px solid black;
+	padding: .75rem 1.5rem;
+	min-width: 170px;
+	font-weight: 500;
+	color: #000;
+	font-size: 1rem;
+	transition: all .5s
+}
+.btn:hover {
+	background: black;
+	color: white;
+}
+
+.section-heading {
+	font-size: 1.1rem;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+	.pt-2-sm {
+		padding-top: 2rem;
+	}
+
+	.image-container {
+		height: 250px;
+	}
+
+	.image-container img {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+/* Your code starts here! */
+.container {
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	max-width: 1280px;
+}
+
+/* ===Navigation=== */
+nav {
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
+	max-width: 1280px;
+	padding: 1.5rem 0 0;
+}
+
+nav ul {
+	width: calc(100% - 350px);
+}
+
+nav li a {
+	font-size: 1rem;
+	color: rgba(0,0,0, .5);
+	font-weight: 600;
+	text-decoration: none;
+	padding: 1.5rem 0;
+	display: block;
+	transition: color .25s;
+}
+
+nav li a:hover {
+	color: rgba(0, 0, 0, 1);
+}
+
+.logo {
+	width: 200px;
+}
+
+@media screen and (max-width: 1140px) {
+    nav ul {
+        width: calc(100% - 250px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+	nav {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    nav ul {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav ul {
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li a {
+        border-top: 1px solid #ccc;
+        display: block;
+        width: 100%;
+    }
+
+    nav li:last-of-type a {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+/* ===Header=== */
+header.home-header {
+	margin: 4rem 0;
+	align-items: center;
+}
+
+header.home-header div {
+	width: 100%;
+	text-align: center;
+}
+
+header.home-header div:last-of-type {
+	display: none;
+}
+
+header.home-header h1 {
+	font-size: 3rem;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 1.1;
+	letter-spacing: 6px;
+}
+
+header.services-header h1 {
+	font-size: 1.7rem;
+}
+
+@media screen and (min-width: 992px) {
+	header.home-header div {
+		width: 50%;
+		text-align: center;
+	}
+
+	header.home-header div:last-of-type {
+		display: block;
+	}
+
+	header.home-header h1 {
+		font-size: 6rem;
+		max-width: 380px;
+	}
+}
+
+/* ===Main Content=== */
+main {
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+@media screen and (min-width: 768px) {
+	.col-2-grid section {
+		width: calc(50% - 15px);
+	}
+	.col-3-grid section {
+		width: calc(33.33% - 15px);	
+	}
+}
+
+.service-card {
+	border: 1px solid black;
+	background: #f6f7f7;
+	padding: 1.5rem;
+	margin-bottom: 2.5rem;
+}
+.service-card:last-child {
+	margin-bottom: 0;
+}
+.service-card button {
+	font-size: .85rem;
+	padding: .65rem 1.5rem;
+	min-width: 150px;
+	border-radius: 7px;
+}
+
+@media screen and (min-width: 768px) {
+	.service-card {
+		width: calc(50% - 1.25rem);
+	}
+
+	.service-card:nth-child(n + 5) {
+		margin-bottom: 0;
+	}
+}
+
+/* ===Footer=== */
+footer section:first-of-type {
+	max-width: 550px;
+}
+footer ul {
+	list-style: outside;
+	padding-left: 15px;
+	font-size: 1.1rem;
+}
+footer li {
+	margin-bottom: .5rem;
+}
+footer .copyright {
+	text-align: center;
+	margin: 4rem 0 2rem;
+}
+
+address span {
+	max-width: 200px;
+	display: block;
+	margin-top: .8rem;
+	line-height: 1.4;
+}
